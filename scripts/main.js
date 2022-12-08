@@ -40,20 +40,6 @@ function tableCreate(gamet) {
 
 }
 
-let ll=[{
-  "code": "A2G7",
-  "name": "Mario + Rabbids Sparks of Hope",
-  "regions": "KOR,TWN,CHN",
-  "version": "B"
-},{
-  "code": "A2G7",
-  "name": "MARIO + RABBIDS SPARKS OF HOPE",
-  "regions": "ALL",
-  "version": "A"
-}]
-//tableCreate(ll);
-//tableCreate(ll);
-
 let data=[];
 fetch('./gamelist/gdata.json')
   .then(response => response.json())
@@ -65,9 +51,6 @@ const q = document.getElementById('query');
 function submitted(event) {
   //console.log({ data })
   event.preventDefault();
-  //const url = google + site + '+' + q.value;
-  //const win = window.open(url, '_blank');
-  //win.focus();
 
   var tables= document.getElementsByTagName('table');
   while (tables.length>0){
@@ -86,7 +69,6 @@ function submitted(event) {
       }
     }  
   }
-  //console.log(codelist)
   let gamelist=[];
   for (var i = 0; i < codelist.length; i++){
     let curcode=codelist[i];
