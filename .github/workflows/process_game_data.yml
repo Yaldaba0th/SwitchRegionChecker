@@ -1,5 +1,9 @@
 name: Process Data
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    branch:
+      - main
+#on: workflow_dispatch
 #  schedule:
 #    - cron: '0 0 * * *' # At 00:00 (midnight) every day
 
