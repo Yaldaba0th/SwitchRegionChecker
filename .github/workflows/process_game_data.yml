@@ -26,8 +26,8 @@ jobs:
       - name: Extract XML file
         run: unzip -qq xml2json/switchtdb.zip -d extracted
 
-      - name: Execute Python script
-        run: python xml2json/xml2json.py # Replace with your script name
+   #   - name: Execute Python script
+    #    run: python xml2json/xml2json.py # Replace with your script name
 
       - name: commit files
         run: |
