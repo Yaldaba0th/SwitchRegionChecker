@@ -24,16 +24,13 @@ jobs:
         run: wget -O xml2json/switchtdb.zip https://www.gametdb.com/switchtdb.zip
 
       - name: Extract XML file
-        id: unzip  
         run: unzip -qq xml2json/switchtdb.zip -d xml2json
 
 #      - name: Execute Python script
 #        id: script
-#        if: steps.unzip.outcome == 'success'
 #        run: python xml2json/xml2json.py
 
  #     - name: Delete Files
- #       if: steps.script.outcome == 'success'
  #       run: |
  #         rm xml2json/switchtdb.zip
  #         rm xml2json/switchtdb.xml
