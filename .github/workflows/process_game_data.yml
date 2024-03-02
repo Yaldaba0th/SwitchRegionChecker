@@ -15,16 +15,16 @@ jobs:
         with:
           python-version: '3.9'
           
-      - name: Install Python packages
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r xml2json/requirements.txt
+#      - name: Install Python packages
+#        run: |
+#          python -m pip install --upgrade pip
+#          pip install -r xml2json/requirements.txt
 
       - name: Download zip file
-        run: wget -O switchtdb.zip https://www.gametdb.com/switchtdb.zip
+        run: wget -O ./switchtdb.zip https://www.gametdb.com/switchtdb.zip
 
       - name: Extract XML file
-        run: unzip -qq switchtdb.zip
+        run: unzip -qq switchtdb.zip -d ./
 
       - name: Checkout repo content again
         uses: actions/checkout@v2
