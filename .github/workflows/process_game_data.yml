@@ -1,7 +1,7 @@
 name: Process Data
-on: workflow_dispatch
-#  schedule:
-#    - cron: '0 0 * * *' # At 00:00 (midnight) every day
+on: 
+  schedule:
+    - cron: '0 0 * * *' # At 00:00 (midnight) every day
 
 jobs:
   process:
@@ -54,4 +54,4 @@ jobs:
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: workflow-test
+          branch: main
