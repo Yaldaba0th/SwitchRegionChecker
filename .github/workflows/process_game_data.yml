@@ -21,10 +21,10 @@ jobs:
 #          pip install -r xml2json/requirements.txt
 
       - name: Download zip file
-        run: wget -O ./switchtdb.zip https://www.gametdb.com/switchtdb.zip
+        run: wget -O switchtdb.zip https://www.gametdb.com/switchtdb.zip
 
       - name: Extract XML file
-        run: unzip -qq switchtdb.zip -d ./
+        run: unzip -qq switchtdb.zip -d 
 
 #      - name: Execute Python script
 #        run: |
