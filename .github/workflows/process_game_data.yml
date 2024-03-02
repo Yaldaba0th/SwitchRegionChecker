@@ -13,7 +13,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9' # Choose the Python version you need
+          python-version: '3.9'
           
       - name: Install Python packages
         run: |
@@ -24,7 +24,7 @@ jobs:
         run: wget -O switchtdb.zip https://www.gametdb.com/switchtdb.zip
 
       - name: Extract XML file
-        run: unzip -qq xml2json/switchtdb.zip
+        run: unzip -qq switchtdb.zip
 
       - name: Checkout repo content again
         uses: actions/checkout@v2
@@ -34,18 +34,18 @@ jobs:
           cp xml2json/xml2json.py xml2json.py
           python xml2json.py
 
-      - name: Replace Data
+      - name: Replace Game Data
         run: | 
           rm gamelist/gdata.json
           cp gdata.json gamelist/gdata.json
-          rm gdata.json
 
-      - name: Delete Files
+      - name: Delete Extra Files
         run: |
           rm switchtdb.zip
           rm switchtdb.xml
           rm xml2json.py
-
+          rm gdata.json
+          
       - name: commit files
         run: |
           git config --local user.email "action@github.com"
