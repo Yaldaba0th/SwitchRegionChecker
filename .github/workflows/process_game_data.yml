@@ -27,19 +27,19 @@ jobs:
         id: unzip  
         run: unzip -qq xml2json/switchtdb.zip -d xml2json
 
-      - name: Checkout repo content again
-        uses: actions/checkout@v2
+#      - name: Checkout repo content again
+#        uses: actions/checkout@v2
 
-      - name: Execute Python script
-        id: script
-        if: steps.unzip.outcome == 'success'
-        run: python xml2json/xml2json.py
+#      - name: Execute Python script
+#        id: script
+#        if: steps.unzip.outcome == 'success'
+#        run: python xml2json/xml2json.py
 
-      - name: Delete Files
-        if: steps.script.outcome == 'success'
-        run: |
-          rm xml2json/switchtdb.zip
-          rm xml2json/switchtdb.xml
+#      - name: Delete Files
+#        if: steps.script.outcome == 'success'
+#        run: |
+#          rm xml2json/switchtdb.zip
+#          rm xml2json/switchtdb.xml
 
       - name: commit files
         run: |
