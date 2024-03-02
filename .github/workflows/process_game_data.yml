@@ -32,7 +32,6 @@ jobs:
 
       - name: Execute Python script
         id: script
-        if: steps.unzip.outcome == 'success'
         run: python xml2json/xml2json.py
 
 #      - name: Delete Files
