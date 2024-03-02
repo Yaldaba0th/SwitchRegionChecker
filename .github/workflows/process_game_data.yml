@@ -33,8 +33,10 @@ jobs:
       - name: Execute Python script
         id: script
         run: |
-          COPY xml2json/xml2json.py /usr/bin/xml2json.py
-          python /usr/bin/xml2json.py
+          cp xml2json/xml2json.py xml2json.py
+          python xml2json.py
+#         COPY xml2json/xml2json.py /usr/bin/xml2json.py
+#         python /usr/bin/xml2json.py
 #          python xml2json.py
 
 #      - name: Delete Files
