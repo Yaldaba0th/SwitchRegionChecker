@@ -24,7 +24,7 @@ jobs:
         run: wget -O switchtdb.zip https://www.gametdb.com/switchtdb.zip
 
       - name: Extract XML file
-        run: unzip -qq switchtdb.zip -d 
+        run: unzip -qq switchtdb.zip
 
 #      - name: Execute Python script
 #        run: |
