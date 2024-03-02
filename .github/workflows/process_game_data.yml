@@ -21,11 +21,11 @@ jobs:
           pip install -r xml2json/requirements.txt
 
       - name: Download zip file
-        run: wget -O xml2json/switchtdb.zip https://www.gametdb.com/switchtdb.zip
+        run: wget -O switchtdb.zip https://www.gametdb.com/switchtdb.zip
 
       - name: Extract XML file
         id: unzip  
-        run: unzip -qq xml2json/switchtdb.zip -d xml2json
+        run: unzip -qq switchtdb.zip
 
       - name: Checkout repo content again
         uses: actions/checkout@v2
