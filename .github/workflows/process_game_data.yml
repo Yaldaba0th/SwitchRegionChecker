@@ -27,6 +27,9 @@ jobs:
         id: unzip  
         run: unzip -qq xml2json/switchtdb.zip -d xml2json
 
+      - name: Checkout repo content again
+        uses: actions/checkout@v2
+
       - name: Execute Python script
         id: script
         if: steps.unzip.outcome == 'success'
