@@ -4,7 +4,7 @@ import json
 def remparen(st):
     return st[:st.rfind("(")-1]
 
-with open('switchtdb.xml', 'r', encoding='utf-8') as file:
+with open('./switchtdb.xml', 'r', encoding='utf-8') as file:
     my_xml = file.read()
 
 temp_dict = xmltodict.parse(my_xml)
