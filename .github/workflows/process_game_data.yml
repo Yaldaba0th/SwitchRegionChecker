@@ -32,7 +32,10 @@ jobs:
 
       - name: Execute Python script
         id: script
-        run: python xml2json/xml2json.py
+        run: |
+          COPY xml2json/xml2json.py /usr/bin/xml2json.py
+          python /usr/bin/xml2json.py
+#          python xml2json.py
 
 #      - name: Delete Files
 #        if: steps.script.outcome == 'success'
