@@ -35,11 +35,11 @@ jobs:
         if: steps.unzip.outcome == 'success'
         run: python xml2json/xml2json.py
 
-      - name: Delete Files
-        if: steps.script.outcome == 'success'
-        run: |
-          rm xml2json/switchtdb.zip
-          rm xml2json/switchtdb.xml
+#      - name: Delete Files
+#        if: steps.script.outcome == 'success'
+#        run: |
+#          rm xml2json/switchtdb.zip
+#          rm xml2json/switchtdb.xml
 
       - name: commit files
         run: |
