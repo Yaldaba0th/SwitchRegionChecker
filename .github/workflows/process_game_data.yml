@@ -34,17 +34,17 @@ jobs:
 #          cp xml2json/xml2json.py xml2json.py
 #          python xml2json.py
 
-      - name: Replace Game Data
-        run: | 
-          rm gamelist/gdata.json
-          cp gdata.json gamelist/gdata.json
+#      - name: Replace Game Data
+#        run: | 
+#          rm gamelist/gdata.json
+#          cp gdata.json gamelist/gdata.json
 
-      - name: Delete Extra Files
-        run: |
-          rm switchtdb.zip
-          rm switchtdb.xml
-          rm xml2json.py
-          rm gdata.json
+#      - name: Delete Extra Files
+#        run: |
+#          rm switchtdb.zip
+#          rm switchtdb.xml
+#          rm xml2json.py
+#          rm gdata.json
           
       - name: commit files
         run: |
