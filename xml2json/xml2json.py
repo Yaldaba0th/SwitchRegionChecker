@@ -5,7 +5,7 @@ import os
 def remparen(st):
     return st[:st.rfind("(")-1]
 
-filepath = os.path.join(os.path.dirname(__file__), "data.json")
+filepath = os.path.join(os.path.dirname(__file__), "switchtdb.xml")
 
 with open(filepath, 'r', encoding='utf-8') as file:
     my_xml = file.read()
