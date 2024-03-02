@@ -1,10 +1,13 @@
 import xmltodict
 import json
+import os
 
 def remparen(st):
     return st[:st.rfind("(")-1]
 
-with open('./switchtdb.xml', 'r', encoding='utf-8') as file:
+filepath = os.path.join(os.path.dirname(__file__), "data.json")
+
+with open(filepath, 'r', encoding='utf-8') as file:
     my_xml = file.read()
 
 temp_dict = xmltodict.parse(my_xml)
