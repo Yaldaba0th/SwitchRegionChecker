@@ -20,15 +20,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r xml2json/requirements.txt
 
-      - name: Download zip file
-        run: wget -O xml2json/switchtdb.zip https://www.gametdb.com/switchtdb.zip
+#      - name: Download zip file
+#        run: wget -O xml2json/switchtdb.zip https://www.gametdb.com/switchtdb.zip
 
-      - name: Extract XML file
-        id: unzip  
-        run: unzip -qq xml2json/switchtdb.zip -d xml2json
+#      - name: Extract XML file
+#        id: unzip  
+#        run: unzip -qq xml2json/switchtdb.zip -d xml2json
 
-      - name: Checkout repo content again
-        uses: actions/checkout@v2
+#      - name: Checkout repo content again
+#        uses: actions/checkout@v2
 
       - name: Execute Python script
         id: script
